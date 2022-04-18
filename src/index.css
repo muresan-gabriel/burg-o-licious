@@ -21,7 +21,7 @@ body {
 
 .main-heading {
   font-size: 64px;
-  padding-top: 10rem;
+  padding-top: 6rem;
   font-weight: 800;
   text-align: center;
   line-height: 0.8;
@@ -37,6 +37,7 @@ iframe {
   padding: 0;
   padding-right: 0 !important;
   padding-left: 0 !important;
+  animation: fadeIn 6s;
 }
 
 #root {
@@ -64,6 +65,34 @@ iframe {
 
 .navbar-brand {
   text-decoration: none;
+}
+
+.asset-name {
+  font-weight: 700;
+  font-size: 36px;
+  text-align: center;
+}
+
+.asset-post {
+  border-radius: 25px;
+}
+
+.asset-card-bg {
+  filter: saturate(0) brightness(0.3);
+  transition: 0.3s;
+  border-radius: 25px;
+}
+
+.asset-post:hover > .asset-card-bg {
+  filter: saturate(1);
+}
+
+@media only screen and (max-width: 1700px) {
+  .asset-name {
+    font-weight: 700;
+    font-size: 26px;
+    text-align: center;
+  }
 }
 
 /* QUERIES */
@@ -97,3 +126,16 @@ iframe {
     height: 75%;
   }
 }
+
+/* KEYFRAMES */
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* LOADING */
